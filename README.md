@@ -20,6 +20,7 @@ HTML, CSS, and JavaScript — no frameworks or dependencies.
 ## Run it locally
 
 Clone the repo and open `index.html` in any browser. No build step needed.
+LINK: https://nabeehaj.github.io/Zakaat-Calculator/
 
 ## Notes
 
