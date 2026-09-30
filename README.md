@@ -15,7 +15,7 @@ Calculate your Zakat in seconds. 100% client-side Python (PyScript) — your fin
 
 ## Built with
 
-Vanilla HTML, CSS, and JavaScript — no frameworks or dependencies.
+HTML, CSS, and JavaScript — no frameworks or dependencies.
 
 ## Run it locally
 
