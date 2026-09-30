@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zakat Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="wrap">
+
+    <header class="intro">
+      <p class="eyebrow-none">Zakat Calculator</p>
+      <h1>Work out what you owe.</h1>
+      <p class="sub">Enter your assets and debts below. This tool checks your total wealth against the nisab threshold and calculates 2.5% zakat if you're due.</p>
+    </header>
+
+    <div class="panels">
+
+      <!-- INPUT PANEL -->
+      <section class="panel form-panel">
+        <h2>Your assets</h2>
+
+        <div class="field-group">
+          <label for="cash">Cash &amp; bank balances</label>
+          <div class="input-currency">
+            <span>$</span>
+            <input type="number" id="cash" min="0" step="0.01" placeholder="0.00">
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label for="gold">Gold &amp; silver value</label>
+          <div class="input-currency">
+            <span>$</span>
+            <input type="number" id="gold" min="0" step="0.01" placeholder="0.00">
+          </div>
+          <p class="hint">Market value of jewelry, coins, or bullion you own.</p>
+        </div>
+
+        <div class="field-group">
+          <label for="investments">Investments</label>
+          <div class="input-currency">
+            <span>$</span>
+            <input type="number" id="investments" min="0" step="0.01" placeholder="0.00">
+          </div>
+          <p class="hint">Stocks, funds, crypto, or other holdings at current value.</p>
+        </div>
+
+        <div class="field-group">
+          <label for="business">Business assets</label>
+          <div class="input-currency">
+            <span>$</span>
+            <input type="number" id="business" min="0" step="0.01" placeholder="0.00">
+          </div>
+          <p class="hint">Inventory or cash held for trade, not equipment you use.</p>
+        </div>
+
+        <div class="field-group">
+          <label for="debts">Debts owed</label>
+          <div class="input-currency">
+            <span>$</span>
+            <input type="number" id="debts" min="0" step="0.01" placeholder="0.00">
+          </div>
+          <p class="hint">Short-term debt due, like bills or money you owe others.</p>
+        </div>
+
+        <h2 class="nisab-heading">Nisab standard</h2>
+        <div class="field-group">
+          <label for="nisabStandard">Calculate threshold using</label>
+          <select id="nisabStandard">
+            <option value="silver">Silver (595g) — lower, more inclusive</option>
+            <option value="gold">Gold (85g) — traditional standard</option>
+          </select>
+        </div>
+
+        <div class="field-group">
+          <label for="metalPrice"><span id="metalLabel">Silver</span> price per gram</label>
+          <div class="input-currency">
+            <span>$</span>
+            <input type="number" id="metalPrice" min="0" step="0.01" placeholder="e.g. 0.95">
+          </div>
+          <p class="hint">Check today's price and enter it here — this updates daily.</p>
+        </div>
+
+        <button id="calculateBtn" type="button">Calculate zakat</button>
+      </section>
+
+      <!-- RESULTS PANEL -->
+      <section class="panel result-panel" id="resultPanel">
+        <div class="result-empty" id="resultEmpty">
+          <p>Fill in your details and calculate to see your breakdown here.</p>
+        </div>
+
+        <div class="result-filled hidden" id="resultFilled">
+          <p class="result-label">Zakat due</p>
+          <p class="result-amount" id="zakatAmount">$0.00</p>
+          <p class="result-status" id="zakatStatus"></p>
+
+          <div class="breakdown">
+            <div class="breakdown-row">
+              <span>Total assets</span>
+              <span id="totalAssets">$0.00</span>
+            </div>
+            <div class="breakdown-row">
+              <span>Debts owed</span>
+              <span id="totalDebts">$0.00</span>
+            </div>
+            <div class="breakdown-row total">
+              <span>Net zakatable wealth</span>
+              <span id="netWealth">$0.00</span>
+            </div>
+            <div class="breakdown-row">
+              <span>Nisab threshold</span>
+              <span id="nisabValue">$0.00</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <footer class="foot-note">
+      <p>Nisab values shift with metal prices, so re-check them periodically. This tool is a starting point, not religious guidance — check with a knowledgeable source for your specific situation.</p>
+    </footer>
+
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>
