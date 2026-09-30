@@ -1,6 +1,8 @@
 # Zakat Calculator
 
-A browser-based tool that calculates zakat owed based on cash, gold/silver, investments, and business assets, checked against the nisab threshold (gold or silver standard).
+Zakat is an annual charitable obligation in Islam, requiring Muslims whose wealth exceeds a minimum threshold (nisab) to give 2.5% of it to those in need.
+
+Calculate your Zakat in seconds. 100% client-side Python (PyScript) — your financial data never touches a server. Supports live gold/silver pricing and both nisab standards. A browser-based tool that calculates zakat owed based on cash, gold/silver, investments, and business assets, checked against the nisab threshold (gold or silver standard).
 
 ## How it works
 
